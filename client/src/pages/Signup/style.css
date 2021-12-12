@@ -1,0 +1,63 @@
+.signup {
+  height: calc(100vh - 50px);
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.unsplash.com/photo-1499914485622-a88fac536970?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signupTitle {
+  font-size: 50px;
+}
+
+.signupForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.signupForm > label {
+  margin: 10px 0;
+}
+
+.signupInput {
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.signupButton {
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  background-color: teal;
+  color: white;
+  border-radius: 10px;
+}
+
+.signinButton {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  border: none;
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.message {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: tomato;
+  color: white;
+}
