@@ -41,7 +41,6 @@ const Settings = () => {
   return (
     <Layout>
       <div className="settings">
-        {loading ? <p>Please wait loading...!</p> : null}
         <div className="settingsWrapper">
           <div className="settingsTitle">
             <span className="settingsUpdateTitle">Update Your Account</span>
