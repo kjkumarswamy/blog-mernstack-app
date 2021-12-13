@@ -17,7 +17,7 @@ export const createPostAction = (form) => {
           },
         });
         dispatch(getAllPostsAction());
-        history.location("/");
+        history.push("/");
       } else {
         if (res.status === 400) {
           dispatch({
