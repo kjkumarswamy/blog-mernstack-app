@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 const Settings = () => {
   const dispatch = useDispatch();
 
+  const { loading } = useSelector((state) => state.updateUserState);
   const { user } = useSelector((state) => state.getUser);
   const [image, setImage] = useState("");
   const [username, setUsername] = useState(user ? user.username : "");
@@ -40,6 +41,7 @@ const Settings = () => {
   return (
     <Layout>
       <div className="settings">
+        {loading ? <p>Please wait loading...!</p> : null}
         <div className="settingsWrapper">
           <div className="settingsTitle">
             <span className="settingsUpdateTitle">Update Your Account</span>
