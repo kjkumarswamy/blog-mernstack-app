@@ -18,7 +18,7 @@ export const createPostAction = (form) => {
         });
         dispatch(getAllPostsAction());
         const { post } = res.data;
-        history.go(`/single/${post._id}`);
+        history.location(`/single/${post._id}`);
       } else {
         if (res.status === 400) {
           dispatch({
