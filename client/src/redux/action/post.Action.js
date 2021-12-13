@@ -1,6 +1,5 @@
 import { postConstants } from "../constants";
 import axios from "../../helpers/axios";
-import history from "../history";
 
 //create posts
 export const createPostAction = (form) => {
@@ -17,7 +16,7 @@ export const createPostAction = (form) => {
           },
         });
         dispatch(getAllPostsAction());
-        history.push("/");
+        window.location.href = "/";
       } else {
         if (res.status === 400) {
           dispatch({
