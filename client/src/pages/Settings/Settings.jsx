@@ -42,7 +42,7 @@ const Settings = () => {
     <Layout>
       <div className="settings">
         <div className="settingsWrapper">
-          {loading ? <p>Updating User...</p> : null}
+          {loading ? <h2>Updating User...</h2> : null}
           <div className="settingsTitle">
             <span className="settingsUpdateTitle">Update Your Account</span>
             <span className="settingsDeleteTitle" onClick={deleteHandler}>
