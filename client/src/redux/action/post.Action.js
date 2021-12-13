@@ -1,5 +1,6 @@
 import { postConstants } from "../constants";
 import axios from "../../helpers/axios";
+import history from "../history";
 
 //create posts
 export const createPostAction = (form) => {
@@ -16,6 +17,8 @@ export const createPostAction = (form) => {
           },
         });
         dispatch(getAllPostsAction());
+        const { post } = res.data;
+        history.push(`/single/${post.userId}`);
       } else {
         if (res.status === 400) {
           dispatch({

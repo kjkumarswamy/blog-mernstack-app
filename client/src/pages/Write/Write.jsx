@@ -3,14 +3,10 @@ import "./write.css";
 import Layout from "../../components/Layout/Layout";
 import { createPostAction } from "../../redux/action/post.Action";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router";
 
 const Write = () => {
   const dispatch = useDispatch();
-  const { loading, success, error, post } = useSelector(
-    (state) => state.createPost
-  );
-  const history = useHistory();
+  const { loading, error } = useSelector((state) => state.createPost);
 
   const [image, setImage] = useState("");
   const [title, setTitle] = useState("");
@@ -27,9 +23,6 @@ const Write = () => {
 
   if (loading) {
     <h2 style={{ color: "green" }}>Loading... Please wait</h2>;
-    if (success) {
-      history.push(`/single/${post.userId}`);
-    }
   }
 
   return (

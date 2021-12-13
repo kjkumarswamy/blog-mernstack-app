@@ -3,7 +3,6 @@ import { postConstants } from "../constants";
 //create posts
 const createPostState = {
   loading: false,
-  success: false,
   post: {},
   error: "",
 };
@@ -16,7 +15,6 @@ export const createPostReducer = (state = createPostState, action) => {
       return {
         ...state,
         loading: false,
-        success: true,
         post: action.payload.post,
       };
     case postConstants.CREATE_POST_FAILURE:
@@ -24,7 +22,6 @@ export const createPostReducer = (state = createPostState, action) => {
         ...state,
         loading: false,
         error: action.payload.error,
-        success: false,
       };
     default:
       return state;
