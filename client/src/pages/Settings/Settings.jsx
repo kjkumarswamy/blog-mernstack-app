@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 const Settings = () => {
   const dispatch = useDispatch();
 
-  const { loading } = useSelector((state) => state.updateUserState);
+  const { loading } = useSelector((state) => state.updateUser);
   const { user } = useSelector((state) => state.getUser);
   const [image, setImage] = useState("");
   const [username, setUsername] = useState(user ? user.username : "");
@@ -42,6 +42,7 @@ const Settings = () => {
     <Layout>
       <div className="settings">
         <div className="settingsWrapper">
+          {loading ? <p>Updating User...</p> : null}
           <div className="settingsTitle">
             <span className="settingsUpdateTitle">Update Your Account</span>
             <span className="settingsDeleteTitle" onClick={deleteHandler}>
