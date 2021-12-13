@@ -7,7 +7,9 @@ import { useHistory } from "react-router";
 
 const Write = () => {
   const dispatch = useDispatch();
-  const { loading, error } = useSelector((state) => state.createPost);
+  const { loading, success, error, post } = useSelector(
+    (state) => state.createPost
+  );
   const history = useHistory();
 
   const [image, setImage] = useState("");
@@ -21,8 +23,14 @@ const Write = () => {
     formData.append("title", title);
     formData.append("desc", desc);
     dispatch(createPostAction(formData));
-    history.push("/");
   };
+
+  if (loading) {
+    <h2 style={{ color: "green" }}>Loading... Please wait</h2>;
+    if (success) {
+      history.push(`/single/${post.userId}`);
+    }
+  }
 
   return (
     <Layout>

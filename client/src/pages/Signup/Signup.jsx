@@ -71,7 +71,7 @@ const Signup = () => {
             ) : error ? (
               <p className="message">{error}</p>
             ) : message ? (
-              <p>{message}</p>
+              <h2 style={{ color: "tomato" }}>{message}</h2>
             ) : null}
           </div>
         </form>
