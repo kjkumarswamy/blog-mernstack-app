@@ -15,7 +15,6 @@ export const registerAction = (user) => {
             message: res.data.message,
           },
         });
-        window.location.href = "/login";
       } else {
         if (res.status === 400) {
           dispatch({

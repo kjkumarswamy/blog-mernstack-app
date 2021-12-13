@@ -16,7 +16,7 @@ const Sidebar = ({ single }) => {
               ? myposts.userId.profilePicture
               : user.profilePicture
               ? user.profilePicture
-              : null
+              : "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
           }
           alt=""
           className="sidebarImg"
