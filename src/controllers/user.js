@@ -15,7 +15,7 @@ exports.updateUser = async (req, res) => {
       userObj.password = await bcrypt.hash(req.body.password, salt);
     }
     if (req.file) {
-      userObj.profilePicture = req.file.filename;
+      userObj.profilePicture = req.file.location;
     }
 
     await User.findByIdAndUpdate(
