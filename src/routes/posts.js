@@ -8,10 +8,15 @@ const {
   updatePost,
   deletePost,
 } = require("../controllers/posts");
-const { upload } = require("../middlewares/multer");
+const { uploadS3 } = require("../middlewares/multer");
 
 //create post
-router.post("/post/create", verifyToken, upload.single("blogimg"), createPost);
+router.post(
+  "/post/create",
+  verifyToken,
+  uploadS3.single("blogimg"),
+  createPost
+);
 
 //get my post
 router.get("/post/mypost/:id", getMyPost);

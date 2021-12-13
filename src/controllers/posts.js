@@ -10,12 +10,12 @@ exports.createPost = async (req, res) => {
     };
 
     if (req.file) {
-      postObj.photo = req.file.filename;
+      postObj.photo = req.file.location;
     }
 
     const newPost = new Post(postObj);
     const post = await newPost.save();
-    res.status(201).json({ post });
+    res.status(201).json({ post, files: req.files });
   } catch (error) {
     return res.status(400).json({ error: error.message });
   }

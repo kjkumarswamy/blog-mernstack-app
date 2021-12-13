@@ -3,10 +3,12 @@ import "./write.css";
 import Layout from "../../components/Layout/Layout";
 import { createPostAction } from "../../redux/action/post.Action";
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router";
 
 const Write = () => {
   const dispatch = useDispatch();
   const { loading, error } = useSelector((state) => state.createPost);
+  const history = useHistory();
 
   const [image, setImage] = useState("");
   const [title, setTitle] = useState("");
@@ -19,6 +21,7 @@ const Write = () => {
     formData.append("title", title);
     formData.append("desc", desc);
     dispatch(createPostAction(formData));
+    history.push("/");
   };
 
   return (

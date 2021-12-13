@@ -13,9 +13,9 @@ const Sidebar = ({ single }) => {
         <img
           src={
             single && myposts.userId
-              ? `http://localhost:5050/public/${myposts.userId.profilePicture}`
+              ? myposts.userId.profilePicture
               : user.profilePicture
-              ? `http://localhost:5050/public/${user.profilePicture}`
+              ? user.profilePicture
               : null
           }
           alt=""
@@ -23,7 +23,7 @@ const Sidebar = ({ single }) => {
         />
         <p>
           <span style={{ display: "block" }}>
-            Writer Name:- &nbsp;{" "}
+            Writer Name:- &nbsp;
             <b>
               {single && myposts.userId
                 ? myposts.userId.username

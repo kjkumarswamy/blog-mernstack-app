@@ -5,11 +5,7 @@ import { Link } from "react-router-dom";
 const Post = ({ post }) => {
   return (
     <div className="post">
-      <img
-        src={post.photo ? `http://localhost:5050/public/${post.photo}` : null}
-        alt=""
-        className="postImg"
-      />
+      <img src={post.photo ? post.photo : null} alt="" className="postImg" />
       <div className="postInfo">
         <div className="postCats">
           <span className="postCat">Life</span>

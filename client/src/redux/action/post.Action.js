@@ -16,7 +16,6 @@ export const createPostAction = (form) => {
           },
         });
         dispatch(getAllPostsAction());
-        window.location.replace(`/single/${res.data.post._id}`);
       } else {
         if (res.status === 400) {
           dispatch({

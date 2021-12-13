@@ -55,7 +55,7 @@ const Settings = () => {
                   image
                     ? URL.createObjectURL(image)
                     : user.profilePicture
-                    ? `http://localhost:5050/public/${user.profilePicture}`
+                    ? user.profilePicture
                     : null
                 }
                 alt=""

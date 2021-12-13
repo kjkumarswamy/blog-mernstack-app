@@ -51,11 +51,7 @@ const SinglePost = () => {
           ) : (
             <>
               <img
-                src={
-                  myposts.photo
-                    ? `http://localhost:5050/public/${myposts.photo}`
-                    : null
-                }
+                src={myposts.photo ? myposts.photo : null}
                 alt=""
                 className="singlePostImg"
               />
