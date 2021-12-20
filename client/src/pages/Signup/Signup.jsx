@@ -65,13 +65,13 @@ const Signup = () => {
           <button className="signupButton" type="submit">
             Signup
           </button>
-          <div>
+          <div style={{ marginBottom: "4px" }}>
             {loading ? (
               <p className="message">Loading... please wait...!</p>
             ) : error ? (
               <p className="message">{error}</p>
             ) : message ? (
-              <h2 style={{ color: "tomato" }}>{message}</h2>
+              <h2 style={{ color: "teal" }}>{message}</h2>
             ) : null}
           </div>
         </form>

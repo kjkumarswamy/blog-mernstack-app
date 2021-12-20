@@ -13,8 +13,8 @@ const categoryRoutes = require("./routes/category");
 const PORT = process.env.PORT;
 
 connectDb();
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 app.use("/public", express.static(__dirname + "/uploads"));
 app.use("/api", authRoutes);

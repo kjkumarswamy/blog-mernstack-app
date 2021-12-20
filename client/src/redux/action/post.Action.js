@@ -105,7 +105,7 @@ export const updatePostAction = (post) => {
             message: res.data.message,
           },
         });
-        window.location.reload(true);
+        window.location.replace("/");
       } else {
         dispatch({
           type: postConstants.UPDATE_POST_FAILURE,
